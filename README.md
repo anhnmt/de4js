@@ -14,7 +14,7 @@ Install one of the following links:
 - [Greasy Fork](https://greasyfork.org/vi/scripts/33479-de4js-helper)
 - [Github](https://lelinhtinh.github.io/de4js/userscript/de4js_helper.user.js)
 
-`*` ***de4js helper** doesn't work offline.*
+`*` _**de4js helper** doesn't work offline._
 
 ## Features
 
@@ -22,7 +22,7 @@ Install one of the following links:
 - Source code beautifier / syntax highlighter.
 - Makes obfuscated code [readable](#helper).
 - Performance unpackers:
-  - **Eval**, e.g. Packer, [WiseLoop](http://wiseloop.com/demo/php-javascript-obfuscator)
+  - **Eval**, e.g. Packer, WiseLoop
   - **Array**, e.g. Javascript Obfuscator, Free JS Obfuscator
   - [_Number](https://jsfiddle.net/ps5anL99/embedded/result,js,html,css/) _(not correct name)_
   - [Packer](http://dean.edwards.name/packer/)
@@ -34,6 +34,7 @@ Install one of the following links:
   - [JSFuck](https://github.com/aemkei/jsfuck)
   - [JJencode](http://utf-8.jp/public/jjencode.html)
   - [AAencode](http://utf-8.jp/public/aaencode.html)
+  - [WiseLoop](http://wiseloop.com/demo/php-javascript-obfuscator)
 
 ## Running with Docker
 
@@ -111,6 +112,7 @@ Preview **de4js** in your web browser at <http://localhost:4000/de4js/>
 - [magic-check](https://github.com/forsigner/magic-check)
 - [cat-in-136](https://cat-in-136.github.io/2010/12/aadecode-decode-encoded-as-aaencode.html)
 - [Decoder-JJEncode](https://github.com/jacobsoo/Decoder-JJEncode)
+- [NotSoWise](https://github.com/FAKE1007/NotSoWise)
 
 ### Resources
 
@@ -123,5 +125,11 @@ Preview **de4js** in your web browser at <http://localhost:4000/de4js/>
 - [Akamai Deobfuscator](https://github.com/char/akamai-deobfuscator): A tool to help you deobfuscate Akamai scripts.
 - [Nice2Predict](https://github.com/eth-sri/Nice2Predict): Learning framework for program property prediction.
 - [Javascript deobfuscation AMA](https://github.com/jsoverson/javascript-deobfuscation-AMA): General questions about deobfuscating JavaScript.
-- [Deobfuscator IO](https://github.com/sd-soleaio/deobfuscator-io): A (incomplete) deobfuscator for scripts obfuscated with obfuscator.io
-- [JavaScript Deobfuscator](https://github.com/LostMyCode/javascript-deobfuscator): Deobfuscation tool for obfuscated JavaScript using obfuscator.io
+- [Deobfuscator IO](https://github.com/sd-soleaio/deobfuscator-io): A (incomplete) deobfuscator for scripts obfuscated with obfuscator.io (Archived).
+- [JavaScript Deobfuscator](https://github.com/LostMyCode/javascript-deobfuscator): Deobfuscation tool for obfuscated JavaScript using obfuscator.io.
+- [Prepack](https://github.com/facebook/prepack): A JavaScript bundle optimizer.
+- [JS Deobfuscate](https://github.com/RuochenLyu/js-deobfuscate): JavaScript deobfuscate for JSjiami, Sojson, ...
+- [JSDec](https://github.com/liulihaocai/JSDec): Online JavaScript decoder. Supported sojson v4/Premium/v5 and more (No longer update).
+- [Synchrony](https://github.com/uwu/synchrony): Kavascript-obfuscator cleaner & deobfuscator.
+
+`*` _[**Obfuscator.IO**](https://obfuscator.io/) is always up to date. The automatic deobfuscation tools (including this project) will usually not match its latest version. But that doesn't mean it's a safe tool to secure your source code._

@@ -20,5 +20,9 @@
   name: JS Obfuscator
 - key: myobfuscate
   name: My Obfuscate
+- key: wiseeval
+  name: Wise Eval
+- key: wisefunction
+  name: Wise Function
 - key: cleansource
   name: Clean Source

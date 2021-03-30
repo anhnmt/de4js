@@ -171,6 +171,10 @@
     },
     workerFormat,
     workerDecode,
+    workerError = (err) => {
+      stopEffect();
+      view.innerHTML = `<span class="hljs-variable">${err.message}</span>`;
+    },
     format = debounce(function () {
       if (temp === '') return;
 
@@ -194,9 +198,7 @@
         source: temp,
         options: options,
       });
-      workerFormat.addEventListener('error', function (err) {
-        console.error('Format Error!', err);
-      });
+      workerFormat.addEventListener('error', workerError);
     }, 250),
     detect = function (source) {
       var type = '';
@@ -221,6 +223,11 @@
         type = 'obfuscatorio';
       } else if (/^var\s+((?![^_a-zA-Z$])[\w$]*)\s*=\s*\[.*?\];/.test(source)) {
         type = 'arrayencode';
+      } else if (
+        source.startsWith('//Protected by WiseLoop PHP JavaScript Obfuscator') ||
+        source.includes(';eval(function(w,i,s,e)')
+      ) {
+        type = 'wisefunction';
       } else if (source.indexOf('eval(') !== -1) {
         if (/\b(window|document|console)\.\b/i.test(source)) return type;
         type = 'evalencode';
@@ -258,9 +265,7 @@
 
           format();
         });
-        workerDecode.addEventListener('error', function (err) {
-          console.error('Decode Error!', err);
-        });
+        workerDecode.addEventListener('error', workerError);
       }
 
       startEffect();
@@ -456,8 +461,8 @@
         fragment.appendChild(txt);
         renderRemove.appendChild(fragment);
       })
-      .catch(function (error) {
-        renderRemove.textContent = error.message;
+      .catch(function (err) {
+        renderRemove.innerHTML = `<span class="hljs-variable">${err.message}</span>`;
       });
   };
 
